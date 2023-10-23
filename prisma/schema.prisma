@@ -67,3 +67,7 @@ enum ChannelType {
   AUDIO
   VIDEO
 }
+
+model Channel {
+  
+}
