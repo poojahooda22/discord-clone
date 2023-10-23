@@ -69,5 +69,5 @@ enum ChannelType {
 }
 
 model Channel {
-  id String @id 
+  id String @id @default(uuid())
 }
