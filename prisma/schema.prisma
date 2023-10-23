@@ -69,5 +69,5 @@ enum ChannelType {
 }
 
 model Channel {
-  id
+  id String
 }
