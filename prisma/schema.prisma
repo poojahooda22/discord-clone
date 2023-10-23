@@ -63,5 +63,6 @@ model Member {
 }
 
 enum ChannelType {
+  Text
   
 }
