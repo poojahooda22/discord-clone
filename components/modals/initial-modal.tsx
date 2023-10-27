@@ -37,7 +37,7 @@ const formSchema = z.object({
     })
 })
 
-export const InitiialModal = () => {
+export const InitialModal = () => {
 
     const [isMounted, setIsMounted] = useState(false);
 
