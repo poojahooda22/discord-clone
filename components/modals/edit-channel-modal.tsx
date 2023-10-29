@@ -136,7 +136,7 @@ export const EditChannelModal = () => {
                     <Select
                       disabled={isLoading}
                       onValueChange={field.onChange}
-                      defaultValue={field.value}
+                      defaultValue={field.value} 
                     >
                       <FormControl>
                         <SelectTrigger
