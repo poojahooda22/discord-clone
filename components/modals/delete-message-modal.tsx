@@ -1,8 +1,9 @@
 "use client";
 
+import qs from "query-string";
 import axios from "axios";
 import { useState } from "react";
-import qs from "query-string";
+
 import {
   Dialog,
   DialogContent,
@@ -11,17 +12,14 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-
 import { useModal } from "@/hooks/use-modal-store";
-import { Button } from "../ui/button";
-
+import { Button } from "@/components/ui/button";
 
 export const DeleteMessageModal = () => {
   const { isOpen, onClose, type, data } = useModal();
 
-
   const isModalOpen = isOpen && type === "deleteMessage";
-  const {apiUrl, query } = data;
+  const { apiUrl, query } = data;
 
   const [isLoading, setIsLoading] = useState(false);
 
@@ -30,21 +28,18 @@ export const DeleteMessageModal = () => {
       setIsLoading(true);
       const url = qs.stringifyUrl({
         url: apiUrl || "",
-        query: {
-        
-        }
-      })
+        query,
+      });
 
       await axios.delete(url);
 
       onClose();
-    
     } catch (error) {
-      console.error(error);
+      console.log(error);
     } finally {
       setIsLoading(false);
     }
-   }
+  }
 
   return (
     <Dialog open={isModalOpen} onOpenChange={onClose}>
@@ -67,7 +62,7 @@ export const DeleteMessageModal = () => {
             >
               Cancel
             </Button>
-            <Button 
+            <Button
               disabled={isLoading}
               variant="primary"
               onClick={onClick}
