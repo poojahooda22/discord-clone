@@ -31,21 +31,19 @@ export const useChatQuery = ({
     return res.json();
   };
 
-const {
-  data,
-  fetchNextPage,
-  hasNextPage,
-  isFetchingNextPage,
-  status,
-} = useInfiniteQuery({
-  queryKey: [queryKey],
-  queryFn: fetchMessages,
-  getNextPageParam: (lastPage) => lastPage?.nextCursor,
-  refetchInterval:  1000,
-  initialPageParam: null // Add this line
-});
-
-
+  const {
+    data,
+    fetchNextPage,
+    hasNextPage,
+    isFetchingNextPage,
+    status,
+  } = useInfiniteQuery({
+    queryKey: [queryKey],
+    queryFn: fetchMessages,
+    getNextPageParam: (lastPage) => lastPage?.nextCursor,
+    refetchInterval: isConnected ? false : 1000,
+    initialPageParam: null as string | null, // add null type
+  });
 
   return {
     data,
