@@ -39,7 +39,18 @@ export const useChatQuery = ({
     status,
   } = useInfiniteQuery({
     queryKey: [queryKey],
-    queryFn: fetchMessages,
+    queryFn: async ({ pageParam }) => {
+      const url = qs.stringifyUrl({
+        url: apiUrl,
+        query: {
+          cursor: pageParam,
+          [paramKey]: paramValue,
+        }
+      }, { skipNull: true });
+
+      const res = await fetch(url);
+      return res.json();
+    },
     getNextPageParam: (lastPage) => lastPage?.nextCursor,
     refetchInterval: isConnected ? false : 1000,
     initialPageParam: null as string | null, // add null type
