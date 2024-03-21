@@ -45,7 +45,7 @@ export const NavigationSidebar = async () => {
                     <div 
                         key={server.id} 
                         className="mb-4"
-                        >
+                    >
                         <NavigationItem 
                             id={server.id}
                             name={server.name}
