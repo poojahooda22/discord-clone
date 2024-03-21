@@ -16,5 +16,5 @@ export const UserAvatar = ({
                 src={src} 
             />
         </Avatar>
-    )
+    );
 }
