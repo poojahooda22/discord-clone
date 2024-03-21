@@ -65,6 +65,7 @@ export const FileUpload = ({
     return (
         <UploadDropzone
             endpoint={endpoint}
+            autoUpload={true}
             onClientUploadComplete={(res) => {
                 onChange(res?.[0].url);
             }}
