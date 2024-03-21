@@ -54,7 +54,7 @@ export const ServerSection = ({
       )}
       {role === MemberRole.ADMIN && sectionType === "members" && (
         <ActionTooltip 
-        label="Manage Members" side="top"
+          label="Manage Members" side="top"
         >
           <button
             onClick={() => onOpen("members", { server })}
