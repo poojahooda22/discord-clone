@@ -33,5 +33,5 @@ export const ActionTooltip = ({
                 </TooltipContent>
             </Tooltip>
         </TooltipProvider>
-    )
+    );
 }
