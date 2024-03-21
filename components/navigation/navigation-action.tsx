@@ -22,7 +22,7 @@ export  const NavigationAction = () =>   {
                     items-center justify-center bg-background 
                     dark:bg-neutral-700 group-hover:bg-emerald-500">
                         <Plus 
-                        className="group-hover:text-white transition text-emerald-500
+                            className="group-hover:text-white transition text-emerald-500
                         "
                         size={24}
                         />
