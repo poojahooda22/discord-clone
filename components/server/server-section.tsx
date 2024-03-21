@@ -47,7 +47,7 @@ export const ServerSection = ({
             dark:hover:text-zinc-300 transition"
           >
             <Plus 
-            className="h-4 w-4" 
+              className="h-4 w-4" 
             />
           </button>
         </ActionTooltip>
