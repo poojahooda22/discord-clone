@@ -14,7 +14,8 @@ export  const NavigationAction = () =>   {
                 side="right"
                 align="center"
             >
-                <button className="group flex items-center"
+                <button 
+                className="group flex items-center"
                     onClick={() => onOpen("createServer")}
                 >
                     <div 
