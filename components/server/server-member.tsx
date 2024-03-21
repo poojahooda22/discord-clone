@@ -53,5 +53,5 @@ export const ServerMember = ({
         </p>
         {icon}
       </button>
-    )
+    );
   }
