@@ -67,5 +67,5 @@ export const ServerSection = ({
         </ActionTooltip>
       )}
     </div>
-  )
+  );
 }
