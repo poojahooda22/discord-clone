@@ -30,7 +30,8 @@ export const ServerSection = ({
       py-2"
     >
       <p 
-        className="text-xs uppercase font-semibold text-zinc-500 
+        className="text-xs uppercase font-semibold 
+        text-zinc-500 
       dark:text-zinc-400">
         {label}
       </p>
