@@ -24,7 +24,7 @@ export  const NavigationAction = () =>   {
                         <Plus 
                             className="group-hover:text-white transition text-emerald-500
                         "
-                        size={24}
+                            size={24}
                         />
                     </div>
                 </button>
